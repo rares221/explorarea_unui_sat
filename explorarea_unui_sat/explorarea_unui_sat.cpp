@@ -26,8 +26,8 @@
 const unsigned int SCR_WIDTH = 1600;
 const unsigned int SCR_HEIGHT = 1000;
 bool rot = false;
-objl::Loader Loader;
-//bool loadout = Loader.LoadFile("duck.obj");
+
+
 enum ECameraMovementType
 {
 	UNKNOWN,
@@ -731,8 +731,8 @@ int main(int argc, char** argv)
 	glfwTerminate();
 	return 0;
 }
+//aici incepoem sa facem obiectele alea adevarate
 
-//aici trebuie sa scriem tot programu legat de obiecte
 
 //aici se termina
 
@@ -750,9 +750,9 @@ void processInput(GLFWwindow* window)
 		pCamera->ProcessKeyboard(LEFT, (float)deltaTime);
 	if (glfwGetKey(window, GLFW_KEY_RIGHT) == GLFW_PRESS)
 		pCamera->ProcessKeyboard(RIGHT, (float)deltaTime);
-	if (glfwGetKey(window, GLFW_KEY_PAGE_UP) == GLFW_PRESS)
+	if (glfwGetKey(window, GLFW_KEY_P) == GLFW_PRESS)
 		pCamera->ProcessKeyboard(UP, (float)deltaTime);
-	if (glfwGetKey(window, GLFW_KEY_PAGE_DOWN) == GLFW_PRESS)
+	if (glfwGetKey(window, GLFW_KEY_O) == GLFW_PRESS)
 		pCamera->ProcessKeyboard(DOWN, (float)deltaTime);
 
 	if (glfwGetKey(window, GLFW_KEY_R) == GLFW_PRESS) {
