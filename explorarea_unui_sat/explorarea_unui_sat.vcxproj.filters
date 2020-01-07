@@ -13,29 +13,77 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="ShadowMapping.fs">
-      <Filter>Source Files</Filter>
-    </None>
-    <None Include="ShadowMapping.vs">
-      <Filter>Source Files</Filter>
-    </None>
-    <None Include="ShadowMappingDepth.fs">
-      <Filter>Source Files</Filter>
-    </None>
-    <None Include="ShadowMappingDepth.vs">
-      <Filter>Source Files</Filter>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="C:\Users\rares\Desktop\OBJ_Loader.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
+    <Filter Include="Shaders">
+      <UniqueIdentifier>{22ccc0fd-123a-4757-936a-e45b1dbc199c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="explorarea_unui_sat.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Castle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Mesh.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="obj_loader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ShaderManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Textures.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Window.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Camera.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Castle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Mesh.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="obj_loader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Object.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ShaderManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Textures.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Window.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Shaders\floor.fs">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\floor.vs">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\ShadowMapping.fs">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\ShadowMapping.vs">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\ShadowMappingDepth.fs">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\ShadowMappingDepth.vs">
+      <Filter>Shaders</Filter>
+    </None>
   </ItemGroup>
 </Project>

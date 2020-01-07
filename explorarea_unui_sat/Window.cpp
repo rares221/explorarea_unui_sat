@@ -72,19 +72,19 @@ void Window::Update()
 	const float cameraSpeed = static_cast<float>(m_deltaTime)* pCamera->cameraSpeedFactor;
 	if (keyState[SDL_SCANCODE_W])
 	{
-		pCamera->ProcessKeyboard(FORWARD, cameraSpeed);
+		pCamera->MoveForward(cameraSpeed);
 	}
 	else if (keyState[SDL_SCANCODE_S])
 	{
-		pCamera->ProcessKeyboard(BACKWARD,cameraSpeed);
+		pCamera->MoveForward(-cameraSpeed);
 	}
 	if (keyState[SDL_SCANCODE_A])
 	{
-		pCamera->ProcessKeyboard(LEFT,cameraSpeed);
+		pCamera->MoveRight(cameraSpeed);
 	}
 	else if (keyState[SDL_SCANCODE_D])
 	{
-		pCamera->ProcessKeyboard(RIGHT,cameraSpeed);
+		pCamera->MoveRight(-cameraSpeed);
 	}
 
 	// Event Handling
