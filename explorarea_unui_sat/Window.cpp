@@ -1,5 +1,5 @@
 #include "Window.h"
-#include"GeneralWindowData.h"
+#include "Settings.h"
 
 #include <GL/glew.h>
 #include <iostream>
@@ -13,7 +13,7 @@ Window::Window(uint16_t width, uint16_t height, const std::string& title)
 	SDL_GL_SetAttribute(SDL_GL_BLUE_SIZE, 8);
 	SDL_GL_SetAttribute(SDL_GL_ALPHA_SIZE, 8);
 	SDL_GL_SetAttribute(SDL_GL_BUFFER_SIZE, 32);
-	SDL_GL_SetAttribute(SDL_GL_DEPTH_SIZE, 16);
+	SDL_GL_SetAttribute(SDL_GL_DEPTH_SIZE, 24);
 	SDL_GL_SetAttribute(SDL_GL_DOUBLEBUFFER, 1);
 
 	// Anti-Aliasing
@@ -32,8 +32,11 @@ Window::Window(uint16_t width, uint16_t height, const std::string& title)
 
 	m_isClosed = false;
 
-	// Face culling
+	// Depth Testing
 	glEnable(GL_DEPTH_TEST);
+	glDepthFunc(GL_LEQUAL);
+
+	// Face culling
 	glEnable(GL_CULL_FACE);
 	glCullFace(GL_BACK);
 
@@ -41,7 +44,7 @@ Window::Window(uint16_t width, uint16_t height, const std::string& title)
 	glEnable(GL_BLEND);
 
 	// Initialize mouse
-	SDL_WarpMouseInWindow(m_window, WindowData::SCR_HEIGHT / 2,WindowData::SCR_WIDTH  / 2);
+	SDL_WarpMouseInWindow(m_window, Settings::WindowWidth / 2, Settings::WindowHeight / 2);
 	SDL_ShowCursor(SDL_DISABLE);
 
 	// Timing
@@ -69,7 +72,7 @@ void Window::Update()
 
 	// Camera movement
 	const Uint8* keyState = SDL_GetKeyboardState(NULL);
-	const float cameraSpeed = static_cast<float>(m_deltaTime)* pCamera->cameraSpeedFactor;
+	const float cameraSpeed = static_cast<float>(m_deltaTime) * pCamera->cameraSpeedFactor;
 	if (keyState[SDL_SCANCODE_W])
 	{
 		pCamera->MoveForward(cameraSpeed);
@@ -112,7 +115,7 @@ void Window::Update()
 		else if (e.type == SDL_MOUSEMOTION)
 		{
 			pCamera->MouseControl(e.motion.x, e.motion.y);
-			SDL_WarpMouseInWindow(m_window, WindowData::SCR_HEIGHT / 2, WindowData::SCR_WIDTH / 2);
+			SDL_WarpMouseInWindow(m_window, Settings::WindowWidth / 2, Settings::WindowHeight / 2);
 		}
 	}
 }

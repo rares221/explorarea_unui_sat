@@ -21,30 +21,33 @@
     <ClCompile Include="explorarea_unui_sat.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Castle.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Mesh.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="obj_loader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ShaderManager.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Textures.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Window.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stb_image.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Skybox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="House.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Castle.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Camera.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Castle.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Mesh.h">
@@ -56,33 +59,54 @@
     <ClInclude Include="Object.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ShaderManager.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Textures.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Window.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Transform.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Terrain.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Skybox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneralWindowData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="House.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Castle.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Shaders\floor.fs">
+    <None Include="Shaders\basicShader.fs">
       <Filter>Shaders</Filter>
     </None>
-    <None Include="Shaders\floor.vs">
+    <None Include="Shaders\basicShader.vs">
       <Filter>Shaders</Filter>
     </None>
-    <None Include="Shaders\ShadowMapping.fs">
+    <None Include="Shaders\LambertsLightShader.fs">
       <Filter>Shaders</Filter>
     </None>
-    <None Include="Shaders\ShadowMapping.vs">
+    <None Include="Shaders\LambertsLightShader.vs">
       <Filter>Shaders</Filter>
     </None>
-    <None Include="Shaders\ShadowMappingDepth.fs">
+    <None Include="Shaders\PhongLight.fs">
       <Filter>Shaders</Filter>
     </None>
-    <None Include="Shaders\ShadowMappingDepth.vs">
+    <None Include="Shaders\PhongLight.vs">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\Skybox.fs">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="Shaders\Skybox.vs">
       <Filter>Shaders</Filter>
     </None>
   </ItemGroup>

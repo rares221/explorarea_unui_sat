@@ -1,11 +1,10 @@
-
-#ifndef WINDOW_INCLUDED_H
-#define WINDOW_INCLUDED_H
-
-
+#pragma once
+#include <cstdint>
 #include <string>
 #include <SDL.h>
+//#include <SDL2/SDL.h>
 #undef main
+
 #include "Camera.h"
 
 class Window
@@ -41,4 +40,4 @@ private:
 	Uint64 m_NOW;
 	Uint64 m_LAST;
 };
-#endif
+

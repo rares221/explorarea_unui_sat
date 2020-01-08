@@ -1,7 +1,7 @@
 #pragma once
-#pragma once
 #include <glm.hpp>
-#include <gtx/transform.hpp>
+#include<gtx/transform.hpp>
+
 
 class Transform
 {
@@ -19,7 +19,7 @@ public:
 		const glm::mat4 rotationXMatrix = glm::rotate(m_rotation.x, glm::vec3(1, 0, 0));
 		const glm::mat4 rotationYMatrix = glm::rotate(m_rotation.y, glm::vec3(0, 1, 0));
 		const glm::mat4 rotationZMatrix = glm::rotate(m_rotation.z, glm::vec3(0, 0, 1));
-		const glm::mat4 rotationMatrix = rotationZMatrix * rotationYMatrix * rotationXMatrix;
+		const glm::mat4 rotationMatrix = rotationZMatrix * rotationYMatrix*rotationXMatrix;
 		const glm::mat4 scaleMatrix = glm::scale(m_scale);
 
 		return positionMatrix * rotationMatrix * scaleMatrix;
@@ -39,3 +39,4 @@ private:
 	glm::vec3 m_scale;
 
 };
+
